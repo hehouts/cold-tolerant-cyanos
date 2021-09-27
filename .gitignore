@@ -1,1 +1,23 @@
 cyano_wholegenomes/
+anvio/subset_data/._jessica_anvio_hmm
+	anvio/subset_data/.db
+	anvio/subset_data/Cyanobium-sp-NIES-981.fa
+	anvio/subset_data/GCF_018845095.1_ASM1884509v1_genomic.db
+	anvio/subset_data/GCF_018845095.1_ASM1884509v1_genomic.fa
+	anvio/subset_data/GCF_018845095.1_ASM1884509v1_genomic.fna
+	anvio/subset_data/GCF_019056575.1_ASM1905657v1_genomic.db
+	anvio/subset_data/GCF_019056575.1_ASM1905657v1_genomic.fa
+	anvio/subset_data/GCF_019056575.1_ASM1905657v1_genomic.fna
+	anvio/subset_data/GCF_900088535.1_ASM90008853v1_genomic.db
+	anvio/subset_data/GCF_900088535.1_ASM90008853v1_genomic.fna
+	anvio/subset_data/dummy.db
+	anvio/subset_data/dummy.fa
+	anvio/subset_data/hmms/genes.hmm.gz
+	anvio/subset_data/jessica_anvio_hmm.tar.gz
+	anvio/subset_data/jessica_anvio_hmm/._genes.hmm.gz
+	anvio/subset_data/jessica_anvio_hmm/._genes.txt
+	anvio/subset_data/jessica_anvio_hmm/._kind.txt
+	anvio/subset_data/jessica_anvio_hmm/._noise_cutoff_terms.txt
+	anvio/subset_data/jessica_anvio_hmm/._reference.txt
+	anvio/subset_data/jessica_anvio_hmm/._target.txt
+	anvio/subset_data/jessica_anvio_hmm/genes.hmm.gz
