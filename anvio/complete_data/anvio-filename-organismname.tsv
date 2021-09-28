@@ -1,0 +1,189 @@
+File Name	Organism Name
+GCA_001704955.2_ASM170495v2_genomic.fna	Microcystis aeruginosa NIES-2481
+GCF_000007925.1_ASM792v1_genomic.fna	Prochlorococcus marinus subsp. marinus str. CCMP1375
+GCF_000009705.1_ASM970v1_genomic.fna	Nostoc sp. PCC 7120 = FACHB-418
+GCF_000009725.1_ASM972v1_genomic.fna	Synechocystis sp. PCC 6803
+GCF_000010065.1_ASM1006v1_genomic.fna	Synechococcus elongatus PCC 6301
+GCF_000010625.1_ASM1062v1_genomic.fna	Microcystis aeruginosa NIES-843
+GCF_000011345.1_ASM1134v1_genomic.fna	Thermosynechococcus elongatus BP-1
+GCF_000011385.1_ASM1138v1_genomic.fna	Gloeobacter violaceus PCC 7421
+GCF_000011465.1_ASM1146v1_genomic.fna	Prochlorococcus marinus subsp. pastoris str. CCMP1986
+GCF_000011485.1_ASM1148v1_genomic.fna	Prochlorococcus marinus str. MIT 9313
+GCF_000012465.1_ASM1246v1_genomic.fna	Prochlorococcus marinus str. NATL2A
+GCF_000012505.1_ASM1250v1_genomic.fna	Synechococcus sp. CC9902
+GCF_000012525.1_ASM1252v1_genomic.fna	Synechococcus elongatus PCC 7942 = FACHB-805
+GCF_000012625.1_ASM1262v1_genomic.fna	Synechococcus sp. CC9605
+GCF_000012645.1_ASM1264v1_genomic.fna	Prochlorococcus marinus str. MIT 9312
+GCF_000013205.1_ASM1320v1_genomic.fna	Synechococcus sp. JA-3-3Ab
+GCF_000013225.1_ASM1322v1_genomic.fna	Synechococcus sp. JA-2-3B'a(2-13)
+GCF_000014265.1_ASM1426v1_genomic.fna	Trichodesmium erythraeum IMS101
+GCF_000014585.1_ASM1458v1_genomic.fna	Synechococcus sp. CC9311
+GCF_000015645.1_ASM1564v1_genomic.fna	Prochlorococcus marinus str. AS9601
+GCF_000015665.1_ASM1566v1_genomic.fna	Prochlorococcus marinus str. MIT 9515
+GCF_000015685.1_ASM1568v1_genomic.fna	Prochlorococcus marinus str. NATL1A
+GCF_000015965.1_ASM1596v1_genomic.fna	Prochlorococcus marinus str. MIT 9301
+GCF_000017845.1_ASM1784v1_genomic.fna	Crocosphaera subtropica ATCC 51142
+GCF_000018065.1_ASM1806v1_genomic.fna	Prochlorococcus marinus str. MIT 9215
+GCF_000018105.1_ASM1810v1_genomic.fna	Acaryochloris marina MBIC11017
+GCF_000019485.1_ASM1948v1_genomic.fna	Synechococcus sp. PCC 7002
+GCF_000020025.1_ASM2002v1_genomic.fna	Nostoc punctiforme PCC 73102
+GCF_000021805.1_ASM2180v1_genomic.fna	Rippkaea orientalis PCC 8801
+GCF_000021825.1_ASM2182v1_genomic.fna	Gloeothece citriformis PCC 7424
+GCF_000022045.1_ASM2204v1_genomic.fna	Cyanothece sp. PCC 7425
+GCF_000024045.1_ASM2404v1_genomic.fna	Rippkaea orientalis PCC 8802
+GCF_000025125.1_ASM2512v1_genomic.fna	Candidatus Atelocyanobacterium thalassa isolate ALOHA
+GCF_000147335.1_ASM14733v1_genomic.fna	Gloeothece verrucosa PCC 7822
+GCF_000161795.2_ASM16179v2_genomic.fna	Synechococcus sp. WH 8109
+GCF_000179235.2_ASM17923v2_genomic.fna	Synechococcus sp. CB0101
+GCF_000195975.1_ASM19597v1_genomic.fna	Synechococcus sp. WH 8102
+GCF_000196515.1_ASM19651v1_genomic.fna	Nostoc azollae' 0708
+GCF_000204075.1_ASM20407v1_genomic.fna	Trichormus variabilis ATCC 29413
+GCF_000284135.1_ASM28413v1_genomic.fna	Synechocystis sp. PCC 6803 substr. GT-I
+GCF_000284215.1_ASM28421v1_genomic.fna	Synechocystis sp. PCC 6803 substr. PCC-N
+GCF_000284455.1_ASM28445v1_genomic.fna	Synechocystis sp. PCC 6803 substr. PCC-P
+GCF_000312705.1_ASM31270v1_genomic.fna	Anabaena sp. 90
+GCF_000316515.1_ASM31651v1_genomic.fna	Cyanobium gracile PCC 6307
+GCF_000316575.1_ASM31657v1_genomic.fna	Calothrix sp. PCC 7507
+GCF_000316605.1_ASM31660v1_genomic.fna	Leptolyngbya sp. PCC 7376
+GCF_000316625.1_ASM31662v1_genomic.fna	Nostoc sp. PCC 7107
+GCF_000316645.1_ASM31664v1_genomic.fna	Nostoc sp. PCC 7524
+GCF_000316665.1_ASM31666v1_genomic.fna	Rivularia sp. PCC 7116
+GCF_000316685.1_ASM31668v1_genomic.fna	Synechococcus sp. PCC 6312
+GCF_000317025.1_ASM31702v1_genomic.fna	Pleurocapsa sp. PCC 7327
+GCF_000317045.1_ASM31704v1_genomic.fna	Geitlerinema sp. PCC 7407
+GCF_000317065.1_ASM31706v1_genomic.fna	Pseudanabaena sp. PCC 7367
+GCF_000317085.1_ASM31708v1_genomic.fna	Synechococcus sp. PCC 7502
+GCF_000317105.1_ASM31710v1_genomic.fna	Oscillatoria acuminata PCC 6304
+GCF_000317125.1_ASM31712v1_genomic.fna	Chroococcidiopsis thermalis PCC 7203
+GCF_000317435.1_ASM31743v1_genomic.fna	Calothrix sp. PCC 6303
+GCF_000317475.1_ASM31747v1_genomic.fna	Oscillatoria nigro-viridis PCC 7112
+GCF_000317495.1_ASM31749v1_genomic.fna	Crinalium epipsammum PCC 9333
+GCF_000317515.1_ASM31751v1_genomic.fna	Microcoleus sp. PCC 7113
+GCF_000317555.1_ASM31755v1_genomic.fna	Gloeocapsa sp. PCC 7428
+GCF_000317575.1_ASM31757v1_genomic.fna	Stanieria cyanosphaera PCC 7437
+GCF_000317615.1_ASM31761v1_genomic.fna	Dactylococcopsis salina PCC 8305
+GCF_000317635.1_ASM31763v1_genomic.fna	Halothece sp. PCC 7418
+GCF_000317675.1_ASM31767v1_genomic.fna	Cyanobacterium aponinum PCC 10605
+GCF_000317695.1_ASM31769v1_genomic.fna	Anabaena cylindrica PCC 7122
+GCF_000340785.1_ASM34078v1_genomic.fna	Synechocystis sp. PCC 6803
+GCF_000478825.2_ASM47882v2_genomic.fna	Synechocystis sp. PCC 6714
+GCF_000484535.1_ASM48453v1_genomic.fna	Gloeobacter kilaueensis JS1
+GCF_000734895.2_ASM73489v2_genomic.fna	Calothrix sp. 336/3
+GCF_000737535.1_ASM73753v1_genomic.fna	Synechococcus sp. KORDI-100
+GCF_000737575.1_ASM73757v1_genomic.fna	Synechococcus sp. KORDI-49
+GCF_000737595.1_ASM73759v1_genomic.fna	Synechococcus sp. KORDI-52
+GCF_000757845.1_ASM75784v1_genomic.fna	Prochlorococcus sp. MIT 0604
+GCF_000757865.1_ASM75786v1_genomic.fna	Prochlorococcus sp. MIT 0801
+GCF_000817325.1_ASM81732v1_genomic.fna	Synechococcus sp. UTEX 2973
+GCF_000829235.1_ASM82923v1_genomic.fna	cyanobacterium endosymbiont of Epithemia turgida isolate EtSB Lake Yunoko
+GCF_000981785.2_ASM98178v2_genomic.fna	Microcystis aeruginosa NIES-2549
+GCF_001182765.1_WH8103.1_genomic.fna	Synechococcus sp. WH 8103
+GCF_001277295.1_ASM127729v1_genomic.fna	Anabaena sp. WA102
+GCF_001521855.1_ASM152185v1_genomic.fna	Synechococcus sp. PCC 73109
+GCF_001548095.1_Gm3709_assembly_1.0_genomic.fna	Geminocystis sp. NIES-3708
+GCF_001548115.1_Gm3709_assembly_1.0_genomic.fna	Geminocystis sp. NIES-3709
+GCF_001548375.1_ASM154837v1_genomic.fna	Nostoc sp. NIES-3756
+GCF_001548395.1_ASM154839v1_genomic.fna	Leptolyngbya sp. O-77
+GCF_001548435.1_ASM154843v1_genomic.fna	Leptolyngbya sp. NIES-3755
+GCF_001548455.1_ASM154845v1_genomic.fna	Fischerella sp. NIES-3754
+GCF_001693255.1_ASM169325v1_genomic.fna	Synechococcus sp. PCC 7003
+GCF_001693275.1_ASM169327v1_genomic.fna	Synechococcus sp. PCC 7117
+GCF_001693295.1_ASM169329v1_genomic.fna	Synechococcus sp. PCC 8807
+GCF_001704955.1_ASM170495v1_genomic.fna	Microcystis aeruginosa NIES-2481
+GCF_001767235.1_ASM176723v1_genomic.fna	Moorea producens PAL-8-15-08-1
+GCF_001885215.1_ASM188521v1_genomic.fna	Synechococcus sp. SynAce01
+GCF_002075285.3_ASM207528v3_genomic.fna	Halomicronema hongdechloris C2206
+GCF_002095975.1_ASM209597v1_genomic.fna	Microcystis aeruginosa PCC 7806SL
+GCF_002142475.1_ASM214247v1_genomic.fna	Leptolyngbya boryana IAM M-101
+GCF_002142495.1_ASM214249v1_genomic.fna	Leptolyngbya boryana dg5
+GCF_002355455.1_ASM235545v1_genomic.fna	Stanieria sp. NIES-3757
+GCF_002356215.1_ASM235621v1_genomic.fna	Synechococcus sp. NIES-970
+GCF_002368175.1_ASM236817v1_genomic.fna	Calothrix sp. NIES-2098
+GCF_002368255.1_ASM236825v1_genomic.fna	Leptolyngbya boryana NIES-2135
+GCF_002368355.1_ASM236835v1_genomic.fna	Chondrocystis sp. NIES-4102
+GCF_002368375.1_ASM236837v1_genomic.fna	Calothrix sp. NIES-4101
+GCF_002368395.1_ASM236839v1_genomic.fna	Calothrix sp. NIES-3974
+GCF_002368455.1_ASM236845v1_genomic.fna	Calothrix sp. NIES-4071
+GCF_002754935.1_ASM275493v1_genomic.fna	Synechococcus lividus PCC 6715
+GCF_002813575.1_ASM281357v1_genomic.fna	Nostoc flagelliforme CCNUN1
+GCF_002896875.1_ASM289687v1_genomic.fna	Nostoc sp. CENA543
+GCF_002949735.1_ASM294973v1_genomic.fna	Nostoc sp. 'Peltigera membranacea cyanobiont' N6
+GCF_002949795.1_ASM294979v1_genomic.fna	Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'
+GCF_003015225.1_ASM301522v1_genomic.fna	Synechocystis sp. IPPAS B-1465
+GCF_003019735.1_ASM301973v1_genomic.fna	Microcystis sp. MC19
+GCF_003054475.1_ASM305447v1_genomic.fna	Nodularia spumigena UHCC 0039
+GCF_003443655.1_ASM344365v1_genomic.fna	Nostoc sphaeroides
+GCF_003555505.1_ASM355550v2_genomic.fna	Thermosynechococcus elongatus PKUAC-SCTE542
+GCF_003574135.1_ASM357413v1_genomic.fna	cyanobacterium endosymbiont of Rhopalodia gibberula
+GCF_003945305.1_ASM394530v1_genomic.fna	Microcystis viridis NIES-102
+GCF_003957805.1_ASM395780v1_genomic.fna	Synechococcus elongatus UTEX 3055
+GCF_003967015.1_ASM396701v1_genomic.fna	Pseudanabaena sp. ABRG5-3
+GCF_003990665.1_ASM399066v2_genomic.fna	Thermosynechococcus vulcanus NIES-2134
+GCF_004209775.1_ASM420977v1_genomic.fna	Synechococcus sp. WH 8101
+GCF_007904085.1_ASM790408v1_genomic.fna	Euhalothece natronophila Z-M001
+GCF_008121535.1_ASM812153v1_genomic.fna	Dolichospermum sp. UHCC 0315A
+GCF_008386235.1_ASM838623v1_genomic.fna	Thermosynechococcus sp. CL-1
+GCF_008807075.1_ASM880707v1_genomic.fna	Synechococcus sp. RSCCF101
+GCF_009372195.1_ASM937219v1_genomic.fna	Nostoc sphaeroides CCNUC1
+GCF_009498015.1_ASM949801v1_genomic.fna	Anabaena sp. YBS01
+GCF_009792235.1_ASM979223v1_genomic.fna	Microcystis aeruginosa FD4
+GCF_009856605.1_ASM985660v1_genomic.fna	Trichormus variabilis 0441
+GCF_009873495.1_ASM987349v1_genomic.fna	Nostoc sp. ATCC 53789
+GCF_010196425.1_ASM1019642v1_genomic.fna	Microcystis aeruginosa NIES-298
+GCF_011769525.1_ASM1176952v1_genomic.fna	Tolypothrix sp. PCC 7910
+GCF_012295525.1_ASM1229552v1_genomic.fna	Oxynema sp. AP17
+GCF_012516395.1_ASM1251639v1_genomic.fna	Dolichospermum flos-aquae CCAP 1403/13F
+GCF_013177315.1_ASM1317731v1_genomic.fna	Thermoleptolyngbya sp. PKUAC-SCTA183
+GCF_013343235.1_ASM1334323v1_genomic.fna	Nostoc sp. TCL240-02
+GCF_013393905.1_ASM1339390v1_genomic.fna	Nostoc sp. C052
+GCF_013393925.1_ASM1339392v1_genomic.fna	Nostoc sp. C057
+GCF_013393945.1_ASM1339394v1_genomic.fna	Nostoc sp. TCL26-01
+GCF_014023275.1_ASM1402327v1_genomic.fna	Nostoc edaphicum CCNP1411
+GCF_014217875.1_ASM1421787v1_genomic.fna	Synechococcus sp. LTW-R
+GCF_014279535.1_ASM1427953v1_genomic.fna	Synechococcus sp. TAK9802
+GCF_014279555.1_ASM1427955v1_genomic.fna	Synechococcus sp. SYN20
+GCF_014279595.1_ASM1427959v1_genomic.fna	Synechococcus sp. RS9909
+GCF_014279615.1_ASM1427961v1_genomic.fna	Synechococcus sp. RS9907
+GCF_014279635.1_ASM1427963v1_genomic.fna	Synechococcus sp. RS9902
+GCF_014279655.1_ASM1427965v1_genomic.fna	Synechococcus sp. ROS8604
+GCF_014279755.1_ASM1427975v1_genomic.fna	Synechococcus sp. PROS-U-1
+GCF_014279775.1_ASM1427977v1_genomic.fna	Synechococcus sp. PROS-9-1
+GCF_014279795.1_ASM1427979v1_genomic.fna	Synechococcus sp. PROS-7-1
+GCF_014279815.1_ASM1427981v1_genomic.fna	Synechococcus sp. NOUM97013
+GCF_014279835.1_ASM1427983v1_genomic.fna	Synechococcus sp. MVIR-18-1
+GCF_014279855.1_ASM1427985v1_genomic.fna	Synechococcus sp. Minos11
+GCF_014279875.1_ASM1427987v1_genomic.fna	Synechococcus sp. MEDNS5
+GCF_014279895.1_ASM1427989v1_genomic.fna	Synechococcus sp. M16.1
+GCF_014279955.1_ASM1427995v1_genomic.fna	Synechococcus sp. BMK-MC-1
+GCF_014279975.1_ASM1427997v1_genomic.fna	Synechococcus sp. BIOS-U3-1
+GCF_014280015.1_ASM1428001v1_genomic.fna	Synechococcus sp. A18-46.1
+GCF_014280035.1_ASM1428003v1_genomic.fna	Synechococcus sp. A18-25c
+GCF_014280055.1_ASM1428005v1_genomic.fna	Synechococcus sp. A18-40
+GCF_014280075.1_ASM1428007v1_genomic.fna	Synechococcus sp. A15-62
+GCF_014280095.1_ASM1428009v1_genomic.fna	Synechococcus sp. A15-60
+GCF_014280115.1_ASM1428011v1_genomic.fna	Synechococcus sp. A15-44
+GCF_014280175.1_ASM1428017v1_genomic.fna	Synechococcus sp. A15-28
+GCF_014280195.1_ASM1428019v1_genomic.fna	Synechococcus sp. A15-24
+GCF_014280215.1_ASM1428021v1_genomic.fna	Synechococcus sp. A15-127
+GCF_014280235.1_ASM1428023v1_genomic.fna	Cyanobium sp. NS01
+GCF_014304795.1_ASM1430479v1_genomic.fna	Synechococcus sp. WH 8101
+GCF_014304815.1_ASM1430481v1_genomic.fna	Synechococcus sp. MIT S9220
+GCF_014489415.1_ASM1448941v1_genomic.fna	Cylindrospermopsis curvispora GIHE-G1
+GCF_015840335.1_ASM1584033v1_genomic.fna	Synechococcus sp. CBW1108
+GCF_015840525.1_ASM1584052v1_genomic.fna	Synechococcus sp. CBW1006
+GCF_015840715.1_ASM1584071v1_genomic.fna	Synechococcus sp. CBW1004
+GCF_015840915.1_ASM1584091v1_genomic.fna	Synechococcus sp. CBW1002
+GCF_015841355.1_ASM1584135v1_genomic.fna	Synechococcus sp. CBW1107
+GCF_016403105.1_ASM1640310v1_genomic.fna	Leptolyngbya sp. BL0902
+GCF_016446395.1_ASM1644639v1_genomic.fna	[Phormidium] sp. ETS-05
+GCF_016745315.1_ASM1674531v1_genomic.fna	Arthrospira sp. PCC 9108
+GCF_016919485.1_ASM1691948v1_genomic.fna	Thermoleptolyngbya sp. PKUAC-SCTB121
+GCF_017086385.1_ASM1708638v1_genomic.fna	Thermosynechococcus sp. TA-1
+GCF_017164015.1_ASM1716401v1_genomic.fna	Nostoc sp. UHCC 0702
+GCF_018139025.1_ASM1813902v1_genomic.fna	Cylindrospermopsis raciborskii N8
+GCF_018282115.1_ASM1828211v1_genomic.fna	Synechocystis sp. PCC 7338
+GCF_018336915.1_ASM1833691v1_genomic.fna	Acaryochloris marina S15
+GCF_018389385.1_ASM1838938v1_genomic.fna	Anthocerotibacter panamensis C109
+GCF_018845095.1_ASM1884509v1_genomic.fna	Synechocystis sp. PCC 6803
+GCF_019056575.1_ASM1905657v1_genomic.fna	Richelia sinica FACHB-800
+GCF_900088535.1_ASM90008853v1_genomic.fna	Cyanobium sp. NIES-981
