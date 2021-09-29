@@ -7,6 +7,7 @@ rule all:
         #     expand("{sample_i}.fa", sample_i=SAMPLE_LST),
         #         tsv is key file for contigs
         #     expand("{sample_i}.tsv", sample_i=SAMPLE_LST)
+        #     expand("{sample_i}.dup.db", sample_i=SAMPLE_LST)
         expand("{sample_i}.db", sample_i=SAMPLE_LST)
 
 rule reformat_fasta:
@@ -25,7 +26,7 @@ rule create_contigs_db:
     input:
         "{sample_i}.fa"
     output:
-        "{sample_i}.db"
+        "{sample_i}.dup.db"
     threads: 4
     shell:
         """
@@ -34,18 +35,12 @@ rule create_contigs_db:
         """
 
 rule run_hmms:
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    #create_contigs_db
+    input:
+        "{sample_i}.dup.db" 
+    output:
+        "{sample_i}.db"
+    shell:
+        """
+        cp {input} {output}
+        anvi-run-hmms -c {output} -H new_hmms/
+        """ 
