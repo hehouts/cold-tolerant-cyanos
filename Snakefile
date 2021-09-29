@@ -1,5 +1,6 @@
-SAMPLE_LST= ["dummy", "dopey"]
-
+# SAMPLE_LST= ["dummy", "dopey"]
+FILENAMES ="file_names.txt"
+SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
 
 rule all:
     input:
@@ -7,12 +8,13 @@ rule all:
         #     expand("{sample_i}.fa", sample_i=SAMPLE_LST),
         #         tsv is key file for contigs
         #     expand("{sample_i}.tsv", sample_i=SAMPLE_LST)
-        #     expand("{sample_i}.dup.db", sample_i=SAMPLE_LST)
-        expand("{sample_i}.db", sample_i=SAMPLE_LST)
+        #     expand("{sample_i}.db", sample_i=SAMPLE_LST)
+        expand("{sample_i}.stats.txt", sample_i=SAMPLE_LST)
+    
 
 rule reformat_fasta:
     input: 
-        "{sample_i}.fna"
+        "cyano_wholegenomes/Cyano_complete_genomes/data/{sample_i}.fna"
     output:
         seq="{sample_i}.fa",
         rpt="{sample_i}.tsv"
@@ -26,7 +28,7 @@ rule create_contigs_db:
     input:
         "{sample_i}.fa"
     output:
-        "{sample_i}.dup.db"
+        "{sample_i}.db"
     threads: 4
     shell:
         """
@@ -36,11 +38,11 @@ rule create_contigs_db:
 
 rule run_hmms:
     input:
-        "{sample_i}.dup.db" 
+        "{sample_i}.db" 
     output:
-        "{sample_i}.db"
+        "{sample_i}.stats.txt"
     shell:
         """
-        cp {input} {output}
-        anvi-run-hmms -c {output} -H new_hmms/
+        anvi-run-hmms -c {input} -H new_hmms/
+        anvi-display-contigs-stats {input} --report-as-text -o {output}
         """ 
