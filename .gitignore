@@ -9,4 +9,6 @@ cyano_wholegenomes/
 dummy*
 dopey*
 
-subset_data/*
+*/subset_data/*
+
+*/.snakemake
