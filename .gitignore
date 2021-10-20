@@ -11,4 +11,4 @@ dopey*
 
 */subset_data/*
 
-*/.snakemake
+.snakemake/*
