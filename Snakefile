@@ -1,5 +1,6 @@
-# SAMPLE_LST= ["dummy", "dopey"]
+# SAMPLE_LST= ["dummy"]
 FILENAMES ="file_names.txt"
+# FILENAMES ="subset_file_names.txt"
 SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
 
 rule all:
@@ -9,7 +10,8 @@ rule all:
         #         tsv is key file for contigs
         #     expand("{sample_i}.tsv", sample_i=SAMPLE_LST)
         #     expand("{sample_i}.db", sample_i=SAMPLE_LST)
-        expand("{sample_i}.stats.txt", sample_i=SAMPLE_LST)
+        #     expand("{sample_i}.stats.txt", sample_i=SAMPLE_LST)
+        expand("{sample_i}.hmm.sequence.txt", sample_i=SAMPLE_LST) 
     
 
 rule reformat_fasta:
@@ -45,4 +47,15 @@ rule run_hmms:
         """
         anvi-run-hmms -c {input} -H new_hmms/
         anvi-display-contigs-stats {input} --report-as-text -o {output}
-        """ 
+        """
+
+rule hmm_sequence_hits:
+    input:
+        db="{sample_i}.db",
+        rpt="{sample_i}.stats.txt"
+    output:
+        "{sample_i}.hmm.sequence.txt"
+    shell:
+        """
+        anvi-get-sequences-for-hmm-hits -c {input.db} --hmm-source new_hmms -o {output}
+        """
