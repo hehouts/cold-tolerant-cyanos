@@ -1,0 +1,49 @@
+---
+title: "CyGenPlots"
+output: html_document
+---
+
+```{r}
+
+  # After installing, comment that line out bc it doesnt need to be run over and over. In theory, just once. 
+#install.packages("tidyverse")
+
+library(tidyverse)
+
+```
+
+```{r}
+# How to read in 1 file
+
+
+x = read_delim("results/GCA_001704955.2_ASM170495v2_genomic.counts.txt", ">", col_names = F, )%>%
+  rename(freq=1, gene=2)
+
+
+
+y = read_delim("results/GCF_000007925.1_ASM792v1_genomic.counts.txt", ">", col_names = F, )%>%
+  rename(freq=1, gene=2)
+
+
+
+z = read_delim("results/GCF_000009705.1_ASM970v1_genomic.counts.txt", ">", col_names = F, )%>%
+  rename(freq=1, gene=2)
+
+```
+
+
+```{r}
+  # We actually dont need a merge vextor yet, bc tibbles are named uniquely, might need for full dataset
+#mergeCols <- c("gene", "metadata")
+
+
+right_join(x, y, by = "gene")
+
+#merge(x, y, z,  by = "gene")
+
+#I think we should have started from the summary report, rip
+```
+
+
+
+
