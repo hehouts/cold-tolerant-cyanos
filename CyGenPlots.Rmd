@@ -18,6 +18,7 @@ library(tidyverse)
 
 x = read_delim("results/GCA_001704955.2_ASM170495v2_genomic.counts.txt", ">", col_names = F, )%>%
   rename(freq=1, gene=2)
+  
 
 
 
@@ -30,6 +31,12 @@ z = read_delim("results/GCF_000009705.1_ASM970v1_genomic.counts.txt", ">", col_n
   rename(freq=1, gene=2)
 
 ```
+
+
+
+
+
+
 
 
 ```{r}
