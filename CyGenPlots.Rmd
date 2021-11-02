@@ -30,9 +30,51 @@ y = read_delim("results/GCF_000007925.1_ASM792v1_genomic.counts.txt", ">", col_n
 z = read_delim("results/GCF_000009705.1_ASM970v1_genomic.counts.txt", ">", col_names = F, )%>%
   rename(freq=1, gene=2)
 
+
 ```
 
 
+
+```{r}
+file.show("file_names.txt")
+```
+
+```{r}
+
+q = read_delim("results/summary-counts-report.txt", col_names =F, ">") %>% 
+    rownames_to_column() %>%
+    pivot_longer(-rowname, 'variable', 'value') %>%
+    pivot_wider(variable, rowname)
+
+r = read_delim("results/summary-counts-report.txt", col_names =F, ">", )
+read_delim
+
+#s = unnest_longer(r, "X1")
+
+t = read_delim(file = "results/summary-counts-report.txt", delim =  " ", col_names =F)
+t = read_delim(file = "results/summary-counts-report.txt", ">") %>% write_delim("tester.txt", ">" )
+v = read_delim(file = "tester.txt")
+
+a <- scan("results/summary-counts-report.txt", what="", sep="\n")
+b <- data.frame(matrix(unlist(a), nrow=length(2), byrow=TRUE))
+library(plyr)
+c = ldply (a, data.frame)
+
+f = read_csv("fixed_summary_counts_2.txt", col_names = FALSE)
+
+g = read_delim("fixed_summary_counts_2.txt", ",",  col_names = FALSE)
+#%>%
+ # column_to_rownames("X2")
+ # separate(X1, "GCF_", remove = FALSE)
+  #separate_rows("X1", "[_genomic.hmm.sequence.txt]")
+ # pivot_longer(X1)
+ # spread()
+
+
+```
+
+# NOTE: 
+join is the wrong thing here. join does adding columns, wee need adding rows...?
 
 
 
@@ -44,7 +86,7 @@ z = read_delim("results/GCF_000009705.1_ASM970v1_genomic.counts.txt", ">", col_n
 #mergeCols <- c("gene", "metadata")
 
 
-right_join(x, y, by = "gene")
+table <- right_join(x, y, by = "gene")
 
 #merge(x, y, z,  by = "gene")
 
