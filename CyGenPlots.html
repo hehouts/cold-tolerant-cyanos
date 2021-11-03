@@ -408,6 +408,9 @@ x = read_delim(&quot;results/GCA_001704955.2_ASM170495v2_genomic.counts.txt&quot
 <pre><code>## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div id="note" class="section level1">
+<h1>NOTE:</h1>
+<p>join is the wrong thing here. join does adding columns, wee need adding rows…?</p>
 <pre class="r"><code>  # We actually dont need a merge vextor yet, bc tibbles are named uniquely, might need for full dataset
 #mergeCols &lt;- c(&quot;gene&quot;, &quot;metadata&quot;)
 
@@ -433,6 +436,7 @@ right_join(x, y, by = &quot;gene&quot;)</code></pre>
 <pre class="r"><code>#merge(x, y, z,  by = &quot;gene&quot;)
 
 #I think we should have started from the summary report, rip</code></pre>
+</div>
 
 
 
