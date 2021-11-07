@@ -1,0 +1,97 @@
+---
+title: "Plots.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+```{r}
+df = read_csv("sub_gene_counts.csv")
+```
+
+
+
+```{r}
+df_relocated = df %>% relocate(Organism) %>% relocate(RefSeq_acc, .after = yfiA)
+
+df_trim = df_relocated %>% select(c(1:22))
+
+
+
+df_melt = reshape2::melt(df_trim)
+```
+
+```{r}
+df_melt %>% 
+  ggplot(aes(y=Organism, x=variable))+
+   geom_tile(aes(fill= value), color="grey")+
+  theme(legend.position = "right",
+        axis.text.x = element_text(angle = 45, hjust=1))+
+  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+    labs(title = "Gene Count",x = "gene", y = "Genome")
+#
+  
+  
+  #theme(plot.title = element_text(hjust = 0.5))
+
+
+#df_long = pivot_longer(df(1:22), names_to = "income", values_to = "count")
+
+```
+
+
+```{r}
+
+df %>% 
+  ggplot(aes(x=gene, y=genome))+
+#  theme_classic(base_family = "Avenir")+
+  geom_tile(aes(fill= Mean_Intensity), color="grey")+
+  theme(legend.position = "right",
+        axis.text.x = element_text(angle = 45, hjust=1))+
+  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+  labs(title = "Variation in One Carbon Metabolites by Treatment ",
+       x = "Treatment",
+       y = "Metabolite")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+```{r echo=TRUE}
+#Chems_in_OneCMetabolism %>% 
+#  ggplot(aes(x=Treatment, y=Chemical_Name))+
+#  theme_classic(base_family = "Avenir")+
+#  geom_tile(aes(fill= Mean_Intensity), color="grey")+
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(angle = 45, hjust=1))+
+#  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+#  labs(title = "Variation in One Carbon Metabolites by Treatment ",
+#       x = "Treatment",
+#       y = "Metabolite")+
+#  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results="hide"}
+#Chems_in_OneCMetabolism %>% 
+#  ggplot(aes(x=Treatment, y=Chemical_Name))+
+#  theme_classic(base_family = "Avenir")+
+#  geom_tile(aes(fill= Mean_Intensity), color="grey")+
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(angle = 45, hjust=1))+
+#  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+#  labs(title = "Variation in One Carbon Metabolites by Treatment ",
+#       x = "Treatment",
+#       y = "Metabolite")+
+#  theme(plot.title = element_text(hjust = 0.5))
+```
+

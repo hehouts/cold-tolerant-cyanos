@@ -12,3 +12,4 @@ dopey*
 */subset_data/*
 
 .snakemake/*
+.Rproj.user

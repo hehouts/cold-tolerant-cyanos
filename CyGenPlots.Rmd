@@ -1,0 +1,70 @@
+---
+title: "CyGenPlots"
+output: html_document
+---
+
+
+
+Needed Files:
+```
+"file_names.txt",
+"sub_gene_counts.csv",
+
+```
+
+
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+
+  #!!! After installing, comment that line out bc it doesnt need to be run over and over. In theory, just once. 
+#install.packages("tidyverse")
+
+library(tidyverse)
+```
+
+
+```{python}
+
+```
+
+
+```{r}
+df = read_csv("sub_gene_counts.csv")
+```
+
+
+
+```{r}
+df_relocated = df %>% relocate(Organism) %>% relocate(RefSeq_acc, .after = yfiA)
+
+df_trim = df_relocated %>% select(c(1:22))
+
+
+
+df_melt = reshape2::melt(df_trim)
+
+  #maybe want to cast values as factors, since they are counts? the change `scale_fill_gradient` to `scale_fill_descrete` in plot later?
+#df_factor = as.factor(df_melt$value)
+```
+
+```{r}
+heatmap = df_melt %>% 
+  ggplot(aes(y=Organism, x=variable))+
+    geom_tile(aes(fill= value), color="grey")+
+    scale_fill_gradient(low="white", high="blue") +
+    theme(axis.text.x = element_text(angle = 45, hjust=1))+
+      #theme(legend.position = "right")+
+    coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+    labs(title = "Gene Count",x = "gene", y = "Genome")
+ggsave("heatmap.png", plot = heatmap)
+#
+  
+  
+  #theme(plot.title = element_text(hjust = 0.5))
+
+
+#df_long = pivot_longer(df(1:22), names_to = "income", values_to = "count")
+
+```
+
