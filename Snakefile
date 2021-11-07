@@ -46,7 +46,7 @@ rule run_hmms:
     shell:
         """
         anvi-run-hmms -c {input}
-        anvi-display-contigs-stats {input} --report-as-text -o {output}
+        anvi-display-contigs-stats {input} --hmm-source hmms --report-as-text -o {output}
         """
 
 rule hmm_sequence_hits:
@@ -57,5 +57,5 @@ rule hmm_sequence_hits:
         "outputs/hit_report/{sample_i}.hmm.sequence.txt"
     shell:
         """
-        anvi-get-sequences-for-hmm-hits -c {input.db} -o {output}
+        anvi-get-sequences-for-hmm-hits -c {input.db} --hmm-source hmms -o {output}
         """

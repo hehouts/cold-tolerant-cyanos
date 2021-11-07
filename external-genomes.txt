@@ -1,6 +1,4 @@
 name	contigs_db_path
-dopey	dopey.db
-dummy	dummy.db
 GCA_001704955.2_ASM170495v2_genomic	GCA_001704955.2_ASM170495v2_genomic.db
 GCF_000007925.1_ASM792v1_genomic	GCF_000007925.1_ASM792v1_genomic.db
 GCF_000009705.1_ASM970v1_genomic	GCF_000009705.1_ASM970v1_genomic.db
