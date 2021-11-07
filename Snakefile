@@ -11,15 +11,15 @@ rule all:
         #     expand("{sample_i}.tsv", sample_i=SAMPLE_LST)
         #     expand("{sample_i}.db", sample_i=SAMPLE_LST)
         #     expand("{sample_i}.stats.txt", sample_i=SAMPLE_LST)
-        expand("{sample_i}.hmm.sequence.txt", sample_i=SAMPLE_LST) 
+        expand("outputs/hit_report/{sample_i}.hmm.sequence.txt", sample_i=SAMPLE_LST) 
     
 
 rule reformat_fasta:
     input: 
         "cyano_wholegenomes/Cyano_complete_genomes/data/{sample_i}.fna"
     output:
-        seq="{sample_i}.fa",
-        rpt="{sample_i}.tsv"
+        seq="seqs/{sample_i}.fa",
+        rpt="outputs/reports/{sample_i}.tsv"
     shell: 
         """
         anvi-script-reformat-fasta {input} -o {output.seq}\
@@ -28,9 +28,9 @@ rule reformat_fasta:
 
 rule create_contigs_db:
     input:
-        "{sample_i}.fa"
+        "seqs/{sample_i}.fa"
     output:
-        "{sample_i}.db"
+        "outputs/db/{sample_i}.db"
     threads: 4
     shell:
         """
@@ -40,22 +40,22 @@ rule create_contigs_db:
 
 rule run_hmms:
     input:
-        "{sample_i}.db" 
+        "outputs/db/{sample_i}.db" 
     output:
-        "{sample_i}.stats.txt"
+        "outputs/reports/{sample_i}.stats.txt"
     shell:
         """
-        anvi-run-hmms -c {input} -H new_hmms/
+        anvi-run-hmms -c {input}
         anvi-display-contigs-stats {input} --report-as-text -o {output}
         """
 
 rule hmm_sequence_hits:
     input:
-        db="{sample_i}.db",
-        rpt="{sample_i}.stats.txt"
+        db="outputs/db/{sample_i}.db",
+        rpt="outputs/reports/{sample_i}.stats.txt"
     output:
-        "{sample_i}.hmm.sequence.txt"
+        "outputs/hit_report/{sample_i}.hmm.sequence.txt"
     shell:
         """
-        anvi-get-sequences-for-hmm-hits -c {input.db} --hmm-source new_hmms -o {output}
+        anvi-get-sequences-for-hmm-hits -c {input.db} -o {output}
         """
