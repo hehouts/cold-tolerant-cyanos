@@ -29,9 +29,7 @@
     #                                           --hmm-source Bacteria_71 \
     #                                           -o output.txt
 
-    anvi-script-gen-hmm-hits-matrix-across-genomes -e external-genomes-absolute-paths.tsv \
-                                               --hmm-source hmms \
-                                               -o gene_hit_matrix_output.txt
+    anvi-script-gen-hmm-hits-matrix-across-genomes -e external-genomes-absolute-paths.tsv --hmm-source new_hmms -o gene_hit_matrix_output.txt
 
     # our "external genomes" is stored in a tsv, external-genomes.tsv. external-genomes.txt is... wrong looking! 
     #         external-genomes-path-2.tsv looks usable for this too
@@ -40,3 +38,15 @@
     # anvi-script-gen-hmm-hits-matrix-across-genomes -e external-genomes \
     #                                               --list-hmm-sources
 
+
+
+
+## getting this warning :
+
+# WARNING
+# ===============================================
+# You (or the programmer) requested genome descriptions for your internal and/or
+# external genomes to be loaded _without_ a 'full init'. There is nothing for you
+# to be concerned. This is just a friendly reminder to make sure you know that if
+# something goes terribly wrong later (like your computer sets itself on fire),
+# this may be the reason.
