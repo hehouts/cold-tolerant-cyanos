@@ -22,8 +22,8 @@ rule reformat_fasta:
     input: 
         "data/cyano_wholegenomes/Cyano_complete_genomes/data/{sample_i}.fna"
     output:
-        seq="seqs/{sample_i}.fa",
-        rpt="outputs/reports/{sample_i}.tsv"
+        seq="data/formatted_seqs/{sample_i}.fa",
+        rpt="outputs/reports/reformat_reports/{sample_i}.tsv"
     shell: 
         """
         anvi-script-reformat-fasta {input} -o {output.seq}\
@@ -32,7 +32,7 @@ rule reformat_fasta:
 
 rule create_contigs_db:
     input:
-        "seqs/{sample_i}.fa"
+        "data/formatted_seqs/{sample_i}.fa"
     output:
         "outputs/db/{sample_i}.db"
     threads: 4
@@ -46,7 +46,7 @@ rule run_hmms:
     input:
         "outputs/db/{sample_i}.db" 
     output:
-        "outputs/reports/{sample_i}.stats.txt"
+        "outputs/reports/hmm_hits/{sample_i}.stats.txt"
     shell:
         """
         anvi-run-hmms -c {input}
