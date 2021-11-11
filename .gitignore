@@ -2,8 +2,8 @@ data/cyano_wholegenomes/Cyano_complete_genomes/data/*.fna
 data/cyano_wholegenomes/Cyano_complete_genomes.tar
 
 
-*/*_genomic.db
-/*/*_genomic.fa
+*.db
+*.fa
 
 
 .snakemake/*
