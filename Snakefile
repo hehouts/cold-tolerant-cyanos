@@ -1,7 +1,9 @@
 # SAMPLE_LST= ["dummy"]
 FILENAMES ="file_names.txt"
 # FILENAMES ="subset_file_names.txt"
-SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
+#SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
+SAMPLE_LST= [0:2][x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
+
 
 rule all:
     input:
