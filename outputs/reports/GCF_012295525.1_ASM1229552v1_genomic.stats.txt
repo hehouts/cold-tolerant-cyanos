@@ -1,0 +1,30 @@
+contigs_db	ctg_cyanos
+Total Length	6357750
+Num Contigs	1
+Num Contigs > 100 kb	1
+Num Contigs > 50 kb	1
+Num Contigs > 20 kb	1
+Num Contigs > 10 kb	1
+Num Contigs > 5 kb	1
+Num Contigs > 2.5 kb	1
+Longest Contig	6357750
+Shortest Contig	6357750
+Num Genes (prodigal)	4896
+L50	1
+L75	1
+L90	1
+N50	6357750
+N75	6357750
+N90	6357750
+Archaea_76	36
+Bacteria_71	74
+Protista_83	61
+Ribosomal_RNA_12S	0
+Ribosomal_RNA_16S	5
+Ribosomal_RNA_18S	0
+Ribosomal_RNA_23S	5
+Ribosomal_RNA_28S	0
+Ribosomal_RNA_5S	0
+archaea (Archaea_76)	0
+bacteria (Bacteria_71)	1
+eukarya (Protista_83)	0
