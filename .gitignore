@@ -1,16 +1,8 @@
-cyano_wholegenomes/*.tar
-cyano_wholegenomes/*.fna*
+data/cyano_wholegenomes/Cyano_complete_genomes/data/*.fna
 
 
 *_genomic.db
 *_genomic.fa
-*_genomic.hmm.sequence.txt
-*_genomic.stats.txt
-*_genomic.tsv
 
-archive/archive-summary-count-reports/GC*
-
-*/subset_data/*
 
 .snakemake/*
-.Rproj.user
