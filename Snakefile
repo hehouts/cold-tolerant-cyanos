@@ -56,7 +56,7 @@ rule run_hmms:
 rule hmm_sequence_hits:
     input:
         db="outputs/db/{sample_i}.db",
-        rpt="outputs/reports/{sample_i}.stats.txt"
+        rpt="outputs/reports/hmm_hits/{sample_i}.stats.txt"
     output:
         "outputs/hit_report/{sample_i}.hmm.sequence.txt"
     shell:
