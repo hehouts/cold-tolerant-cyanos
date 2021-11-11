@@ -1,4 +1,6 @@
-cyano_wholegenomes/
+cyano_wholegenomes/*.tar
+cyano_wholegenomes/*.fna*
+
 
 *_genomic.db
 *_genomic.fa
@@ -6,8 +8,7 @@ cyano_wholegenomes/
 *_genomic.stats.txt
 *_genomic.tsv
 
-dummy*
-dopey*
+archive/archive-summary-count-reports/GC*
 
 */subset_data/*
 
