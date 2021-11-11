@@ -2,6 +2,7 @@
 FILENAMES ="file_names.txt"
 # FILENAMES ="subset_file_names.txt"
 #SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
+HMM_DIR_NAME="new_hmms"
 
 FULL_SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
 SAMPLE_LST= FULL_SAMPLE_LST[0:2]
@@ -43,6 +44,12 @@ rule create_contigs_db:
         """
 
 #rule check_hmm_folder:
+#    input: "/{HMM_DIR_NAME}/genes.hmm.gz"
+#    output:
+#    shell:
+#        """
+#        /new_hmms/genes.hmm.gz  /new_hmms/genes.txt 
+#        """
 
 
 
@@ -54,7 +61,7 @@ rule run_hmms:
     shell:
         """
         anvi-delete-hmms -c {input} --just-do-it
-        anvi-run-hmms -c {input} --hmm-profile-dir hmms
+        anvi-run-hmms -c {input} --hmm-profile-dir {HMM_DIR_NAME}
         anvi-display-contigs-stats {input} --report-as-text -o {output}
         """
 
