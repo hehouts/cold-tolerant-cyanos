@@ -29,7 +29,7 @@
     #                                           --hmm-source Bacteria_71 \
     #                                           -o output.txt
 
-    anvi-script-gen-hmm-hits-matrix-across-genomes -e external-genomes-absolute-paths.tsv --hmm-source new_hmms -o gene_hit_matrix_output.txt
+    anvi-script-gen-hmm-hits-matrix-across-genomes -e external-genomes.tsv --hmm-source hmms -o gene_hit_matrix_output.txt
 
     # our "external genomes" is stored in a tsv, external-genomes.tsv. external-genomes.txt is... wrong looking! 
     #         external-genomes-path-2.tsv looks usable for this too
