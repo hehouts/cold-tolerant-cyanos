@@ -4,7 +4,7 @@ FILENAMES ="file_names.txt"
 #SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
 
 FULL_SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
-SAMPLE_LST= FULL_SAMPLE_LST[0:2]
+SAMPLE_LST= FULL_SAMPLE_LST[3:5]
 
 HMM_DIR_NAME="fresh_hmms"
 
