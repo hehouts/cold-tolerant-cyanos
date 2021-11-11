@@ -53,9 +53,9 @@ rule run_hmms:
         "outputs/reports/hmm_hits/{sample_i}.stats.txt"
     shell:
         """
-        anvi-delete-hmms {input}
-        anvi-run-hmms -c {input}
-        anvi-display-contigs-stats {input} --hmm-source hmms --report-as-text -o {output}
+        anvi-delete-hmms -c {input} --just-do-it
+        anvi-run-hmms -c {input} --hmm-profile-dir hmms
+        anvi-display-contigs-stats {input} --report-as-text -o {output}
         """
 
 rule hmm_sequence_hits:
