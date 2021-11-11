@@ -6,6 +6,7 @@ FILENAMES ="file_names.txt"
 FULL_SAMPLE_LST= [x.strip().split(".fna")[0] for x in open(FILENAMES, 'r')]
 SAMPLE_LST= FULL_SAMPLE_LST[0:2]
 
+HMM_DIR_NAME="fresh_hmms"
 
 rule all:
     input:
@@ -53,8 +54,7 @@ rule run_hmms:
         "outputs/reports/hmm_hits/{sample_i}.stats.txt"
     shell:
         """
-        anvi-delete-hmms -c {input} --just-do-it
-        anvi-run-hmms -c {input} --hmm-profile-dir hmms
+        anvi-run-hmms -c {input} --hmm-profile-dir {HMM_DIR_NAME}
         anvi-display-contigs-stats {input} --report-as-text -o {output}
         """
 
@@ -68,5 +68,10 @@ rule hmm_sequence_hits:
         "outputs/hit_report/{sample_i}.hmm.sequence.txt"
     shell:
         """
-        anvi-get-sequences-for-hmm-hits -c {input.db} --hmm-source hmms -o {output}
+        anvi-get-sequences-for-hmm-hits -c {input.db} --hmm-source {HMM_DIR_NAME} -o {output}
         """
+
+# anvi-delete-hmms -c {input} --just-do-it
+
+# rerun the whole snakefile
+# touch /home/kmrcello/cyanobacteria/cold-tolerant-cyanos/data/cyano_wholegenomes/Cyano_complete_genomes/data/*
