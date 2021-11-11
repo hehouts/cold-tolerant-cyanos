@@ -16,7 +16,7 @@ rule all:
 
 rule reformat_fasta:
     input: 
-        "cyano_wholegenomes/Cyano_complete_genomes/data/{sample_i}.fna"
+        "data/cyano_wholegenomes/Cyano_complete_genomes/data/{sample_i}.fna"
     output:
         seq="seqs/{sample_i}.fa",
         rpt="outputs/reports/{sample_i}.tsv"
