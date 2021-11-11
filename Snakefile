@@ -42,6 +42,10 @@ rule create_contigs_db:
         -T {threads} --project-name ctg_cyanos
         """
 
+#rule check_hmm_folder:
+
+
+
 rule run_hmms:
     input:
         "outputs/db/{sample_i}.db" 
@@ -49,6 +53,7 @@ rule run_hmms:
         "outputs/reports/hmm_hits/{sample_i}.stats.txt"
     shell:
         """
+        anvi-delete-hmms {input}
         anvi-run-hmms -c {input}
         anvi-display-contigs-stats {input} --hmm-source hmms --report-as-text -o {output}
         """
@@ -56,6 +61,8 @@ rule run_hmms:
 rule hmm_sequence_hits:
     input:
         db="outputs/db/{sample_i}.db",
+        
+        #we dont actually use these anymore, they are a placeholder for snakemake while .dbs are updated
         rpt="outputs/reports/hmm_hits/{sample_i}.stats.txt"
     output:
         "outputs/hit_report/{sample_i}.hmm.sequence.txt"
