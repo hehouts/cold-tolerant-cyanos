@@ -1,0 +1,4 @@
+these guys are causing problems. reasons unknown:
+
+GCF_000010065.1_ASM1006v1_genomic
+GCF_000009725.1_ASM972v1_genomic
