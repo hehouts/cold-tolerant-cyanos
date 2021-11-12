@@ -1,4 +1,5 @@
 these guys are causing problems. reasons unknown:
 
-GCF_000010065.1_ASM1006v1_genomic
-GCF_000009725.1_ASM972v1_genomic
+GCF_000179235.2_ASM17923v2_genomic
+GCF_000013225.1_ASM1322v1_genomic
+GCF_016919485.1_ASM1691948v1_genomic
