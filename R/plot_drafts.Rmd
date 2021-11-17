@@ -35,12 +35,12 @@ df_melt = reshape2::melt(df) %>% rename("Gene"="variable") %>% rename("Gene_Coun
 
   full_heatmap <- df_melt %>%
   ggplot(aes(y=Gene, x=Genome))+
-  geom_tile(aes(fill= Gene_Count, color = "white"))+
+  geom_tile(aes(fill= Gene_Count, color="white"))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = "right",
         text = element_text(size=4),
         axis.text.x = element_text(angle = 45, hjust=1))+
-  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+#  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
   labs(title = "Gene Count",x = "Genome", y = "Gene")
 
 ggsave("gene_count_heatmap.png", plot = full_heatmap, dpi = 2000)
@@ -57,11 +57,11 @@ df_melt_pres_abs <- df_melt %>%
   #run without saving to variable to print directly to script window
 pres_abs_heatmap <- df_melt_pres_abs %>% 
   ggplot(aes(y=Gene, x=Genome))+
-  geom_tile(aes(fill= pres_or_abs, color = "green"))+
+  geom_tile(aes(fill= pres_or_abs, color="white"))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = "right",
         axis.text.x = element_text(angle = 45, hjust=1))+
-  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+  #coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
     labs(title = "Gene Count",x = "Genome", y = "Gene")
 ggsave("pres_abs_heatmap.png", plot = pres_abs_heatmap, dpi = 2000)
 

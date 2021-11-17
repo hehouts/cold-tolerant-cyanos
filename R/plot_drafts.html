@@ -370,12 +370,12 @@ summary {
 
   full_heatmap &lt;- df_melt %&gt;%
   ggplot(aes(y=Gene, x=Genome))+
-  geom_tile(aes(fill= Gene_Count, color = &quot;white&quot;))+
+  geom_tile(aes(fill= Gene_Count, color=&quot;white&quot;))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = &quot;right&quot;,
         text = element_text(size=4),
         axis.text.x = element_text(angle = 45, hjust=1))+
-  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+#  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
   labs(title = &quot;Gene Count&quot;,x = &quot;Genome&quot;, y = &quot;Gene&quot;)
 
 ggsave(&quot;gene_count_heatmap.png&quot;, plot = full_heatmap, dpi = 2000)</code></pre>
@@ -388,11 +388,11 @@ df_melt_pres_abs &lt;- df_melt %&gt;%
   #run without saving to variable to print directly to script window
 pres_abs_heatmap &lt;- df_melt_pres_abs %&gt;% 
   ggplot(aes(y=Gene, x=Genome))+
-  geom_tile(aes(fill= pres_or_abs, color = &quot;green&quot;))+
+  geom_tile(aes(fill= pres_or_abs, color=&quot;white&quot;))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = &quot;right&quot;,
         axis.text.x = element_text(angle = 45, hjust=1))+
-  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+  #coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
     labs(title = &quot;Gene Count&quot;,x = &quot;Genome&quot;, y = &quot;Gene&quot;)
 ggsave(&quot;pres_abs_heatmap.png&quot;, plot = pres_abs_heatmap, dpi = 2000)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
