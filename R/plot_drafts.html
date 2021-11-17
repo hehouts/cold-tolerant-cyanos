@@ -373,11 +373,12 @@ summary {
   geom_tile(aes(fill= Gene_Count, color = &quot;white&quot;))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = &quot;right&quot;,
+        text = element_text(size=4),
         axis.text.x = element_text(angle = 45, hjust=1))+
   coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
   labs(title = &quot;Gene Count&quot;,x = &quot;Genome&quot;, y = &quot;Gene&quot;)
 
-ggsave(&quot;gene_count_heatmap.png&quot;, plot = full_heatmap)</code></pre>
+ggsave(&quot;gene_count_heatmap.png&quot;, plot = full_heatmap, dpi = 2000)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <pre class="r"><code># Working Pres/Abs
 
@@ -393,7 +394,7 @@ pres_abs_heatmap &lt;- df_melt_pres_abs %&gt;%
         axis.text.x = element_text(angle = 45, hjust=1))+
   coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
     labs(title = &quot;Gene Count&quot;,x = &quot;Genome&quot;, y = &quot;Gene&quot;)
-ggsave(&quot;pres_abs_heatmap.png&quot;, plot = pres_abs_heatmap)</code></pre>
+ggsave(&quot;pres_abs_heatmap.png&quot;, plot = pres_abs_heatmap, dpi = 2000)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 
 
