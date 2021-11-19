@@ -10,7 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(viridis)
 
 library(tidyverse)
-df = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
+#df = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
+
+df = read_tsv("/Users/kaylahmarcello/Desktop/sumner_lab/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
 
 df_melt = reshape2::melt(df) %>% rename("Genome"="genome_or_bin") %>% rename("Gene"="variable") %>% rename("Gene_Count"="value") %>%  mutate(Gene_Count = as.factor(Gene_Count))
 
