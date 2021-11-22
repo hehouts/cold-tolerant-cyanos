@@ -7,3 +7,4 @@ data/cyano_wholegenomes/Cyano_complete_genomes.tar
 
 
 .snakemake/*
+.Rproj.user
