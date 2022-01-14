@@ -5,6 +5,9 @@ data/cyano_wholegenomes/Cyano_complete_genomes.tar
 *.db
 *.fa
 
+*/*/.DS_Store
+*/*/.RData
+*/*/.Rhistory
 
 .snakemake/*
 .Rproj.user
