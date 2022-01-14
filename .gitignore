@@ -9,5 +9,10 @@ data/cyano_wholegenomes/Cyano_complete_genomes.tar
 */*/.RData
 */*/.Rhistory
 
+.DS_Store
+R/.Rhistory
+
+
+
 .snakemake/*
 .Rproj.user
