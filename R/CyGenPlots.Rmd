@@ -36,12 +36,9 @@ ggsave("heatmap1.png", plot = heatmap1)
 
 
 
-
-
-
 ```{r}
 library(tidyverse)
-df_full = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
+df_full = read_tsv("/Users/kaylahmarcello/Desktop/sumner_lab/cold-tolerant-cyanos/outputs/gene-hits/filamentous_gene_count.tsv")
 df_full_melt = reshape2::melt(df_full) %>% rename("Genome"="genome_or_bin") %>% rename("Gene"="variable") %>% rename("Gene_Count"="value")
 
 
@@ -52,7 +49,7 @@ full_heatmap <- df_full_melt %>%
         axis.text.x = element_text(angle = 45, hjust=1))+
   coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
     labs(title = "Gene Count",x = "Genome", y = "Gene")
-ggsave("full_heatmap.png", plot = full_heatmap)
+#ggsave("full_heatmap.png", plot = full_heatmap)
 
 ```
 
