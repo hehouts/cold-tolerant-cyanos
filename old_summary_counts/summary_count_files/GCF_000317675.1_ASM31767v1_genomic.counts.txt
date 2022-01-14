@@ -1,0 +1,16 @@
+      1 >aceF
+      1 >deaD
+      1 >desA
+      6 >dnaK
+      2 >gyrA
+      1 >infA
+      1 >infB
+      1 >infC
+      1 >nusA
+      1 >otsA
+      2 >pnp
+      1 >rbfA
+      1 >recA
+      3 >rnr
+      1 >tig
+      1 >yfiA
