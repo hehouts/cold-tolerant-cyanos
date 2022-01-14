@@ -13,9 +13,9 @@ library(tidyverse)
 
 #df = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
 
-df_og = read_tsv("/Users/kaylahmarcello/Desktop/sumner_lab/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
+#df_og = read_tsv("/Users/kaylahmarcello/Desktop/sumner_lab/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
 
-# df_og = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
+df_og = read_tsv("/Users/hehouts/projects/cold-tolerant-cyanos/outputs/gene-hits/gene_hit_matrix_output.tsv")
 df_og = df_og%>% rename("Genome"="genome_or_bin")
 
 #file_basename_to_orgname_df = read_csv("/Users/hehouts/projects/cold-tolerant-cyanos/R/genome-filename-to-basename.csv")
