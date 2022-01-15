@@ -1,0 +1,64 @@
+---
+title: "fil_plots"
+output: html_document
+---
+```{r libraries}
+library(tidyverse)
+library(janitor)
+library(viridis)
+```
+
+```{r load-data}
+df_from_anvi = read_tsv("../outputs/gene-hits/gene_hit_matrix_output.tsv")
+df_from_anvi = df_from_anvi %>% rename(genome=genome_or_bin)
+
+file_basename_to_orgname_df = read_csv("genome-filename-to-basename.csv")
+file_basename_to_orgname_df = clean_names(file_basename_to_orgname_df)
+df_from_anvi = left_join(df_from_anvi,file_basename_to_orgname_df, by = c("genome" = "base_name"))
+df_from_anvi = df_from_anvi %>% select(!genome) %>% relocate(organism_name) %>% select(!file_name)
+
+df_from_carla = read_csv("hmm_hits_genomes.csv")
+df_from_carla = df_from_carla[1:22] %>% rename(organism_name=genome_or_bin)
+
+
+# df is the working dataframe
+df = add_row(df_from_anvi, df_from_carla)
+
+```
+
+```{r melt}
+df_melt = reshape2::melt(df) %>% rename("gene"="variable") %>% rename("gene_count"="value") %>%  mutate(gene_count = as.factor(gene_count))
+
+```
+
+```{r, heatmap}
+  full_heatmap <- df_melt %>%
+  ggplot(aes(y=gene, x=organism_name))+
+  geom_tile(aes(fill= gene_count, color="white"))+
+  scale_fill_viridis(discrete=TRUE, direction = -1)+
+  theme(legend.position = "right",
+        text = element_text(size=4),
+        axis.text.x = element_text(angle = 45, hjust=1))+
+  coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
+  labs(title = "Gene Count",x = "Genome", y = "Gene")
+
+ggsave("gene_count_heatmap.png", plot = full_heatmap, dpi = 200)
+
+full_heatmap 
+```
+
+```{r, fil_subset_heatmap}
+
+# filter() lets you select rows, 
+# just go and hand pick them, 
+
+#take df, paste into sheets, and add a column that is fil? and do T/F
+#or rawdog it
+
+```
+
+
+```{r, pres_abs_heatmap}
+
+
+```
