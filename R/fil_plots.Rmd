@@ -48,7 +48,7 @@ full_heatmap
 ```
 
 ```{r, fil_subset_heatmap}
-filamentous_subset <- filter(df_melt, organism_name %in% c("Nostoc sp. PCC 7120 = FACHB-418", "Nostoc sp. PCC 7107", "Anabaena cylindrica PCC 7122", "Anabaena sp. 90", "Anabaena sp. WA102", "Anabaena sp. YBS01", "Calothrix sp. NIES-2098", "Calothrix sp. NIES-3974", "Calothrix sp. NIES-4071", "Calothrix sp. NIES-4101", "Calothrix sp. PCC 6303", "Calothrix sp. PCC 7507", "Candidatus_Melainabacteria_bacterium_MEL_A1", "Dolichospermum sp. UHCC 0315A", "Gloeobacter kilaueensis JS1", "Fryxell_1_Phormidesmis_coldgenes", "Fryxell_2_Leptolyngbyaceae_coldgenes", "Fryxell_3_Anabaena_coldgenes", "Joyce_1_Leptolyngbyaceae_coldgenes", "Leptolyngbya boryana dg5", "LLeptolyngbya boryana IAM M-101", "Leptolyngbya boryana NIES-2135", "Leptolyngbya sp. NIES-3755", "Leptolyngbya sp. O-77", "Leptolyngbya sp. PCC 7376", "Microcoleus sp. PCC 7113","Nostoc flagelliforme CCNUN1", "Nostoc punctiforme PCC 73102", "Nostoc azollae' 0708", "Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","Nostoc sp. 'Peltigera membranacea cyanobiont' N6", "Nostoc sp. ATCC 53789", "Nostoc sp. CENA543", "Nostoc sp. NIES-3756", "Nostoc sp. PCC 7524", "Nostoc sphaeroides", "Nostoc sphaeroides CCNUC1", "Oscillatoria acuminata PCC 6304", "Oscillatoria nigro-viridis PCC 7112", "Pseudanabaena sp. ABRG5-3", "Pseudanabaena sp. PCC 7367", "Trichodesmium erythraeum IMS101"))
+filamentous_subset <- filter(df_melt, organism_name %in% c("Nostoc sp. PCC 7120 = FACHB-418", "Nostoc sp. PCC 7107", "Anabaena cylindrica PCC 7122", "Anabaena sp. 90", "Anabaena sp. WA102", "Anabaena sp. YBS01", "Calothrix sp. NIES-2098", "Calothrix sp. NIES-3974", "Calothrix sp. NIES-4071", "Calothrix sp. NIES-4101", "Calothrix sp. PCC 6303", "Calothrix sp. PCC 7507", "Dolichospermum sp. UHCC 0315A", "Fryxell_1_Phormidesmis_coldgenes", "Fryxell_2_Leptolyngbyaceae_coldgenes", "Fryxell_3_Anabaena_coldgenes", "Joyce_1_Leptolyngbyaceae_coldgenes", "Leptolyngbya boryana dg5", "LLeptolyngbya boryana IAM M-101", "Leptolyngbya boryana NIES-2135", "Leptolyngbya sp. NIES-3755", "Leptolyngbya sp. O-77", "Leptolyngbya sp. PCC 7376", "Microcoleus sp. PCC 7113","Nostoc flagelliforme CCNUN1", "Nostoc punctiforme PCC 73102", "Nostoc azollae' 0708", "Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","Nostoc sp. 'Peltigera membranacea cyanobiont' N6", "Nostoc sp. ATCC 53789", "Nostoc sp. CENA543", "Nostoc sp. NIES-3756", "Nostoc sp. PCC 7524", "Nostoc sphaeroides", "Nostoc sphaeroides CCNUC1", "Oscillatoria acuminata PCC 6304", "Oscillatoria nigro-viridis PCC 7112", "Pseudanabaena sp. ABRG5-3", "Pseudanabaena sp. PCC 7367", "Trichodesmium erythraeum IMS101"))
 filamentous_subset
 # filter() lets you select rows, 
 # just go and hand pick them, 
@@ -69,7 +69,7 @@ fil_heatmap <- filamentous_subset %>%
   coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
   labs(title = "Gene Count",x = "Genome", y = "Gene")
 
-ggsave("fil_gene_count_heatmap.pdf", plot = full_heatmap, dpi = 200)
+ggsave("fil_gene_count_heatmap.bmp", plot = fil_heatmap, dpi = 200)
 
 fil_heatmap 
 ```
