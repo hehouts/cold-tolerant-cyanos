@@ -26,6 +26,8 @@ df = add_row(df_from_anvi, df_from_carla)
 
 ```
 
+
+
 ```{r melt}
 df_melt = reshape2::melt(df) %>% rename("gene"="variable") %>% rename("gene_count"="value") %>%  mutate(gene_count = as.factor(gene_count))
 
@@ -46,9 +48,26 @@ ggsave("gene_count_heatmap.png", plot = full_heatmap, dpi = 200)
 
 full_heatmap 
 ```
+```{r}
+df_melt$organism_name[df_melt$organism_name=="Fryxell_1_Phormidesmis_coldgenes"] <- "aaFryxell_1_Phormidesmis_coldgenes"
+df_melt$organism_name[df_melt$organism_name=="Fryxell_2_Leptolyngbyaceae_coldgenes"] <- "aaFryxell_2_Leptolyngbyaceae_coldgenes"
+df_melt$organism_name[df_melt$organism_name=="Fryxell_3_Anabaena_coldgenes"] <- "aaFryxell_3_Anabaena_coldgenes"
+df_melt$organism_name[df_melt$organism_name=="Joyce_1_Leptolyngbyaceae_coldgenes"] <- "aaJoyce_1_Leptolyngbyaceae_coldgenes"
+```
 
 ```{r, fil_subset_heatmap}
-filamentous_subset <- filter(df_melt, organism_name %in% c("Nostoc sp. PCC 7120 = FACHB-418", "Nostoc sp. PCC 7107", "Anabaena cylindrica PCC 7122", "Anabaena sp. 90", "Anabaena sp. WA102", "Anabaena sp. YBS01", "Calothrix sp. NIES-2098", "Calothrix sp. NIES-3974", "Calothrix sp. NIES-4071", "Calothrix sp. NIES-4101", "Calothrix sp. PCC 6303", "Calothrix sp. PCC 7507", "Dolichospermum sp. UHCC 0315A", "Fryxell_1_Phormidesmis_coldgenes", "Fryxell_2_Leptolyngbyaceae_coldgenes", "Fryxell_3_Anabaena_coldgenes", "Joyce_1_Leptolyngbyaceae_coldgenes", "Leptolyngbya boryana dg5", "LLeptolyngbya boryana IAM M-101", "Leptolyngbya boryana NIES-2135", "Leptolyngbya sp. NIES-3755", "Leptolyngbya sp. O-77", "Leptolyngbya sp. PCC 7376", "Microcoleus sp. PCC 7113","Nostoc flagelliforme CCNUN1", "Nostoc punctiforme PCC 73102", "Nostoc azollae' 0708", "Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","Nostoc sp. 'Peltigera membranacea cyanobiont' N6", "Nostoc sp. ATCC 53789", "Nostoc sp. CENA543", "Nostoc sp. NIES-3756", "Nostoc sp. PCC 7524", "Nostoc sphaeroides", "Nostoc sphaeroides CCNUC1", "Oscillatoria acuminata PCC 6304", "Oscillatoria nigro-viridis PCC 7112", "Pseudanabaena sp. ABRG5-3", "Pseudanabaena sp. PCC 7367", "Trichodesmium erythraeum IMS101"))
+filamentous_subset <- filter(df_melt, organism_name %in% c("aaFryxell_1_Phormidesmis_coldgenes", "aaFryxell_2_Leptolyngbyaceae_coldgenes", "aaFryxell_3_Anabaena_coldgenes", "aaJoyce_1_Leptolyngbyaceae_coldgenes", "Nostoc sp. PCC 7120 = FACHB-418", "Anabaena cylindrica PCC 7122", "Anabaena sp. 90", "Anabaena sp. WA102", "Anabaena sp. YBS01", "Calothrix sp. PCC 6303", "Dolichospermum sp. UHCC 0315A",  "Leptolyngbya boryana dg5", "LLeptolyngbya boryana IAM M-101", "Leptolyngbya boryana NIES-2135", "Leptolyngbya sp. NIES-3755", "Leptolyngbya sp. O-77", "Leptolyngbya sp. PCC 7376", "Microcoleus sp. PCC 7113","Nostoc flagelliforme CCNUN1", "Nostoc punctiforme PCC 73102", "Nostoc azollae' 0708", "Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","Nostoc sp. 'Peltigera membranacea cyanobiont' N6", "Nostoc sp. ATCC 53789", "Nostoc sp. CENA543", "Nostoc sp. NIES-3756", "Nostoc sphaeroides", "Nostoc sphaeroides CCNUC1", "Oscillatoria acuminata PCC 6304", "Oscillatoria nigro-viridis PCC 7112", "Pseudanabaena sp. ABRG5-3", "Pseudanabaena sp. PCC 7367", "Trichodesmium erythraeum IMS101"))
+filamentous_subset
+# filter() lets you select rows, 
+# just go and hand pick them, 
+
+#take df, paste into sheets, and add a column that is fil? and do T/F
+#or rawdog it
+#names(df_melt)
+```
+
+```{r, fil_subset_heatmap}
+#filamentous_subset <- filter(df_melt, organism_name %in% c("aaFryxell_1_Phormidesmis_coldgenes", "aaFryxell_2_Leptolyngbyaceae_coldgenes", "aaFryxell_3_Anabaena_coldgenes", "aaJoyce_1_Leptolyngbyaceae_coldgenes", "Nostoc sp. PCC 7120 = FACHB-418", "Nostoc sp. PCC 7107", "Anabaena cylindrica PCC 7122", "Anabaena sp. 90", "Anabaena sp. WA102", "Anabaena sp. YBS01", "Calothrix sp. NIES-2098", "Calothrix sp. NIES-3974", "Calothrix sp. NIES-4071", "Calothrix sp. NIES-4101", "Calothrix sp. PCC 6303", "Calothrix sp. PCC 7507", "Dolichospermum sp. UHCC 0315A",  "Leptolyngbya boryana dg5", "LLeptolyngbya boryana IAM M-101", "Leptolyngbya boryana NIES-2135", "Leptolyngbya sp. NIES-3755", "Leptolyngbya sp. O-77", "Leptolyngbya sp. PCC 7376", "Microcoleus sp. PCC 7113","Nostoc flagelliforme CCNUN1", "Nostoc punctiforme PCC 73102", "Nostoc azollae' 0708", "Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","Nostoc sp. 'Peltigera membranacea cyanobiont' N6", "Nostoc sp. ATCC 53789", "Nostoc sp. CENA543", "Nostoc sp. NIES-3756", "Nostoc sp. PCC 7524", "Nostoc sphaeroides", "Nostoc sphaeroides CCNUC1", "Oscillatoria acuminata PCC 6304", "Oscillatoria nigro-viridis PCC 7112", "Pseudanabaena sp. ABRG5-3", "Pseudanabaena sp. PCC 7367", "Trichodesmium erythraeum IMS101"))
 filamentous_subset
 # filter() lets you select rows, 
 # just go and hand pick them, 
@@ -64,12 +83,12 @@ fil_heatmap <- filamentous_subset %>%
   geom_tile(aes(fill= gene_count, color="white"))+
   scale_fill_viridis(discrete=TRUE, direction = -1)+
   theme(legend.position = "right",
-        text = element_text(size=4),
+        text = element_text(size=6),
         axis.text.x = element_text(angle = 45, hjust=1))+
   coord_fixed()+ #maintains aspect ratio so 1 unit on x is 1 unit on y
   labs(title = "Gene Count",x = "Genome", y = "Gene")
 
-ggsave("fil_gene_count_heatmap.bmp", plot = fil_heatmap, dpi = 200)
+ggsave("fil_gene_count_heatmap.pdf", width=10, height=5, plot = fil_heatmap, dpi = 200)
 
 fil_heatmap 
 ```
